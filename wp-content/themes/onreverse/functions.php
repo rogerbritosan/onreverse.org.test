@@ -12,6 +12,7 @@ add_action('after_setup_theme','onreverse_theme_support');
 function onreverse_menus(){
     $locations = array(
         'primary' => 'Desktop primary left sidebar',
+        'network' => 'Network',
         'footer' => 'Footer menu items'
     );
 
@@ -22,10 +23,11 @@ add_action('init', 'onreverse_menus');
 
 function onreverse_register_styles(){
 
-    $version = wp_get_theme()->get('Version');
+    //$version = wp_get_theme()->get('Version');
+    $version = date("Y-m-d H:i:s");
 
     wp_enqueue_style('onreverse-style', get_template_directory_uri() . '/style.css', array('onreverse-bootstrap'), $version, 'all');
-    wp_enqueue_style('onreverse-bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css', array(), '4.4.1', 'all');
+    wp_enqueue_style('onreverse-bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css', array(), '5.2.2', 'all');
     wp_enqueue_style('onreverse-fontawesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css', array(), '5.13.0', 'all');
 
 }
@@ -34,9 +36,9 @@ add_action('wp_enqueue_scripts', 'onreverse_register_styles');
 
 function onreverse_register_scripts(){
     
-    wp_enqueue_script('onreverse-jquery', 'https://code.jquery.com/jquery-3.4.1.slim.min.js', array(), '3.4.1', true);
-    wp_enqueue_script('onreverse-popper', 'https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js', array(), '1.16.0', true);
-    wp_enqueue_script('onreverse-bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js', array(), '4.4.1', true);
+    // wp_enqueue_script('onreverse-jquery', 'https://code.jquery.com/jquery-3.4.1.slim.min.js', array(), '3.4.1', true);
+    wp_enqueue_script('onreverse-popper', 'https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js', array(), '2.11.6', true);
+    wp_enqueue_script('onreverse-bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js', array(), '5.2.2', true);
     wp_enqueue_script('onreverse-custom', get_template_directory_uri() . '/assets/js/main.js', array(), '1.0', true);
 
 }
