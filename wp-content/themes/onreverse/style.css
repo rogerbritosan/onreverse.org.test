@@ -98,8 +98,8 @@ h6 {
 }
 
 .header {
-    background: var(--primary);
-    color: #fff
+    color: #fff;
+    background-color: var(--lightgray);
 }
 .header .site-title {
     /* color:var(--white);
@@ -121,6 +121,7 @@ h6 {
 
 .header .navbar {
     /* padding: 2rem 1rem */
+    background-color: var(--white);
 }
 
 .header .navbar-dark .navbar-toggler {
@@ -132,6 +133,10 @@ h6 {
     -webkit-opacity: 1;
     -moz-opacity: 1;
     opacity: 1
+}
+
+.main-wrapper {
+    border-top: 1px solid var(--gray);
 }
 
 .logo{
@@ -157,7 +162,9 @@ h6 {
 }
 
 .footer {
-    color: rgba(255, 255, 255, 0.7)
+    border-top: 1px solid var(--gray);
+    background-color: var(--gray-dark);
+    color: var(--white);
 }
 
 .footer a {

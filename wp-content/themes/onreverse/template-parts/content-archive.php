@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container-xl">
 
     <div class="post mb-5">
         <div class="media">

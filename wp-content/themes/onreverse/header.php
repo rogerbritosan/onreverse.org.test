@@ -19,23 +19,34 @@
 
 <body>
 
-    <header class="header text-center">
+    <header class="header">
 
-        <div class="container">
-            <?php
-            wp_nav_menu(
-                array(
-                    'menu' => 'network',
-                    'container' => '',
-                    'theme_location' => 'network',
-                    'items_wrap' => '<ul id="" class="social-list list-inline py-3 mx-auto">%3$s</ul>'
-                )
-            );
-            ?>
+        <div class="container-xl">
+
+            <div class="row">
+
+                <div class="col">
+
+                    <?php
+                    wp_nav_menu(
+                        array(
+                            'menu' => 'network',
+                            'container' => '',
+                            'theme_location' => 'network',
+                            'items_wrap' => '<ul id="" class="social-list list-inline py-3 mx-auto">%3$s</ul>'
+                        )
+                    );
+                    ?>
+
+                </div>
+
+            </div>
+
+
         </div>
 
-        <nav class="navbar navbar-expand-lg bg-light">
-            <div class="container">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-xl">
                 <a class="navbar-brand" href="/">
 
                     <?php if (function_exists('the_custom_logo')) {
@@ -73,6 +84,10 @@
     </header>
 
     <div class="main-wrapper">
-        <header class="page-title theme-bg-light text-center gradient py-5">
-            <h1 class="heading"><?php the_title(); ?></h1>
-        </header>
+        <div class="container-xl">
+            <div class="row">
+                <div class="col py-4">
+                    <h1 class="heading"><?php the_title(); ?></h1>
+                </div>
+            </div>
+        </div>
